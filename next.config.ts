@@ -9,21 +9,11 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  // Optimize for production
-  experimental: {
-    optimizeCss: true,
-  },
-  
-  // Image optimization settings
-  images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
-  },
-  
-  // Compression and performance
+  // Basic optimizations only
   compress: true,
   poweredByHeader: false,
+  
+  // Remove the experimental optimizeCss that's causing the issue
 }
 
 export default nextConfig
-
